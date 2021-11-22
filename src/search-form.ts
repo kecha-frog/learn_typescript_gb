@@ -1,25 +1,25 @@
 import {renderBlock} from './lib.js'
 
 class DateClass {
-  date = new Date()
+  date:Date = new Date()
   y = this.date.getFullYear()
   m = this.date.getMonth();
   d = this.date.getDate()
 
   datePlus = new Date(this.y, this.m, this.d)
 
-  getDaysPlus(daysPlus:number) {
+  getDaysPlus(daysPlus:number):string {
     this.datePlus.setDate(this.datePlus.getDate() + daysPlus)
     return this.datePlus.getFullYear() + '-' + (this.datePlus.getMonth()+1) + '-' + this.datePlus.getDate()
   }
 
-  getMonthPlus() {
-    const lastDay = new Date(this.y, this.m, 0);
+  getMonthPlus():string {
+    const lastDay:Date = new Date(this.y, this.m, 0);
     lastDay.setMonth(this.m + 1)
     return lastDay.getFullYear() + '-' + (lastDay.getMonth()+1) + '-' + lastDay.getDate()
   }
 
-  getToday() {
+  getToday():string {
     return this.y + '-' + (this.m+1)+ '-' + this.d
   }
 }
