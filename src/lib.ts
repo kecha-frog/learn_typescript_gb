@@ -8,7 +8,7 @@ export function renderBlock(elementId: string, html: string) {
 export function renderToast(message?: { text: string, type: string } | null, action?: { name: string, handler: () => void }) {
   let messageText = ''
 
-  if (message != null) {
+  if (message) {
     messageText = `
       <div id="info-block" class="info-block ${message.type}">
         <p>${message.text}</p>

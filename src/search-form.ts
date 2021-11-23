@@ -6,7 +6,7 @@ class DateClass {
   m = this.date.getMonth();
   d = this.date.getDate()
 
-  datePlus = new Date(this.y, this.m, this.d)
+  datePlus:Date = new Date(this.y, this.m, this.d)
 
   getDaysPlus(daysPlus:number):string {
     this.datePlus.setDate(this.datePlus.getDate() + daysPlus)
