@@ -12,7 +12,7 @@ window.addEventListener('DOMContentLoaded', () => {
     userName:'Test Test',
     avatarUrl:'/img/avatar.png'
   }))
-  localStorage.setItem('favoritesAmount','1')
+  localStorage.setItem('favoritesAmount','100')
 
   const {userName, avatarUrl} = getUserData()
   const favoritesAmount = getFavoritesAmount()
