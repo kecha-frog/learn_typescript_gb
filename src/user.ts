@@ -1,8 +1,8 @@
 import { renderBlock } from './lib.js'
 
-export function renderUserBlock (userName:string, urlImg:string, favoriteItemsAmount:string) {
-  const favoritesCaption = Number(favoriteItemsAmount) ? favoriteItemsAmount : 'ничего нет'
-  const hasFavoriteItems = Number(favoriteItemsAmount) > 0
+export function renderUserBlock (userName:string, urlImg:string, favoriteItemsAmount:number) {
+  const favoritesCaption = favoriteItemsAmount ? favoriteItemsAmount : 'ничего нет'
+  const hasFavoriteItems = favoriteItemsAmount > 0
 
   renderBlock(
     'user-block',

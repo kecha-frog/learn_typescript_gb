@@ -5,7 +5,7 @@ export function renderSearchStubBlock () {
     'search-results-block',
     `
     <div class="before-results-block">
-      <img src="img/start-search.png" />
+      <img src="img/start-search.png" alt=""/>
       <p>Чтобы начать поиск, заполните форму и&nbsp;нажмите "Найти"</p>
     </div>
     `
@@ -17,7 +17,7 @@ export function renderEmptyOrErrorSearchBlock (reasonMessage:string) {
     'search-results-block',
     `
     <div class="no-results-block">
-      <img src="img/no-results.png" />
+      <img src="img/no-results.png" alt=""/>
       <p>${reasonMessage}</p>
     </div>
     `
