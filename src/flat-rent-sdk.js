@@ -4,7 +4,7 @@ const database = [
     title: 'Radisson Royal Hotel',
     details: 'Отель расположен в 4 минутах ходьбы от станции метро «Маяковская». К услугам гостей фитнес-центр и спа-центр с сауной и гидромассажной ванной.',
     photos: ['vnd331.png', 'vnd331.png'],
-    coordinates: [59.9322936,30.3460129],
+    coordinates: [59.9322936, 30.3460129],
     bookedDates: [],
     price: 12000
   },
@@ -13,7 +13,7 @@ const database = [
     title: 'Номера на Садовой',
     details: 'Расположен в 7 минутах ходьбы от Невского проспекта. К услугам гостей круглосуточная стойка регистрации и бесплатный Wi-Fi.',
     photos: ['ab2e2.png', 'ab2e2.png'],
-    coordinates: [59.930325,30.3291592],
+    coordinates: [59.930325, 30.3291592],
     bookedDates: [],
     price: 4500
   },
@@ -22,7 +22,7 @@ const database = [
     title: 'Мини Отель на Невском 136',
     details: 'Мини-отель расположен в Санкт-Петербурге, в 5 минутах ходьбы от станции метро «Площадь Восстания» и Московского железнодорожного вокзала.',
     photos: ['mvm32l.png', 'mvm32l.png'],
-    coordinates: [59.9299603,30.3658932],
+    coordinates: [59.9299603, 30.3658932],
     bookedDates: [],
     price: 3800
   },
@@ -31,7 +31,7 @@ const database = [
     title: 'Отель Усадьба Державина',
     details: 'Прекрасный отель недалеко от Исаакиевского собора с бесплатным Wi-Fi на всей территории.',
     photos: ['bvep12.png', 'bvep12.png'],
-    coordinates: [59.9194966,30.309389],
+    coordinates: [59.9194966, 30.309389],
     bookedDates: [],
     price: 8700
   }
@@ -59,11 +59,11 @@ export class FlatRentSdk {
   }
 
   /**
-     * Get flat by ID.
-     *
-     * @param {string} id Flat ID.
-     * @returns {Promise<Object|null>} Flat.
-     */
+   * Get flat by ID.
+   *
+   * @param {string} id Flat ID.
+   * @returns {Promise<Object|null>} Flat.
+   */
   get(id) {
     const flat = this.database.find((item) => {
       return item.id === id
@@ -73,15 +73,15 @@ export class FlatRentSdk {
   }
 
   /**
-     * Search for flats.
-     *
-     * @param {Object} parameters Search parameters
-     * @param {string}parameters.city City name
-     * @param {Date} parameters.checkInDate Check-in date
-     * @param {Date} parameters.checkOutDate Check-out date
-     * @param {number} [parameters.priceLimit] Max price for a night
-     * @returns {Object[]} List of suitable flats.
-     */
+   * Search for flats.
+   *
+   * @param {Object} parameters Search parameters
+   * @param {string}parameters.city City name
+   * @param {Date} parameters.checkInDate Check-in date
+   * @param {Date} parameters.checkOutDate Check-out date
+   * @param {number} [parameters.priceLimit] Max price for a night
+   * @returns {Object[]} List of suitable flats.
+   */
   search(parameters) {
     return new Promise((resolve, reject) => {
       try {
@@ -123,13 +123,13 @@ export class FlatRentSdk {
   }
 
   /**
-     * Book flat.
-     *
-     * @param {number} flatId
-     * @param {Date} checkInDate
-     * @param {Date} checkOutDate
-     * @returns {number}
-     */
+   * Book flat.
+   *
+   * @param {number} flatId
+   * @param {Date} checkInDate
+   * @param {Date} checkOutDate
+   * @returns {number}
+   */
   book(flatId, checkInDate, checkOutDate) {
     return new Promise((resolve, reject) => {
       try {

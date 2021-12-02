@@ -4,6 +4,8 @@ import {renderUserBlock} from './user.js'
 import {renderToast} from './lib.js'
 import {getFavoritesAmount, getUserData} from './helper/helper.js';
 import {getTodosByCount} from './helper/todosCount.js';
+import {test_rent_sdk} from './test_rent_sdk.js';
+
 
 window.addEventListener('DOMContentLoaded', () => {
   //Тест
@@ -20,6 +22,8 @@ window.addEventListener('DOMContentLoaded', () => {
   renderSearchFormBlock()
   renderSearchStubBlock()
 
+  //Test
+  test_rent_sdk().then()
   getTodosByCount(3).then()
   renderToast(
     {text: 'Это пример уведомления. Используйте его при необходимости', type: 'success'},
