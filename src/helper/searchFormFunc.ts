@@ -7,6 +7,3 @@ export interface ISearchFormData {
 export const searchFormFunc = (formData: ISearchFormData): void => {
   console.log(formData)
 }
-
-
-

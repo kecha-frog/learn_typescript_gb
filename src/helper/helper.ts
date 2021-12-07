@@ -31,6 +31,6 @@ export const getFavoritesAmount = (): number => {
     return +userData
   }
 
-  //Если localStorage пуст или не соответствует IFavorites
+  //Если localStorage пуст или не число
   return 0
 }
